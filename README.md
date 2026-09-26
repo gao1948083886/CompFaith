@@ -52,17 +52,17 @@ No task-specific training, pretrained evaluator, or LLM inference is required.
 
 Given a source document $x$, a generated response $y$, and a lossless compressor $k$, CompFaith first computes the source-conditioned compression description increment:
 
-$$
+```math
 \Delta_k(x,y)
 =
 C_k(x \Vert y)-C_k(x)
-$$
+```
 
 where $C_k(\cdot)$ denotes the compressed description length produced by compressor $k$.
 
 The increment is normalized by the compressed description length of the response:
 
-$$
+```math
 H_k(x,y)
 =
 \frac{
@@ -73,16 +73,16 @@ C_k(y),
 }{
 C_k(y)
 }
-$$
+```
 
 Finally, CompFaith aggregates the scores produced by **LZ4** and **Zstandard** using minimum aggregation:
 
-$$
+```math
 H(x,y)
 =
 \min_{k\in\{\mathrm{LZ4},\mathrm{Zstd}\}}
 H_k(x,y)
-$$
+```
 
 A larger $H(x,y)$ indicates a higher **faithfulness hallucination risk**.
 
