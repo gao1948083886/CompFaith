@@ -90,22 +90,11 @@ A larger $H(x,y)$ indicates a higher **faithfulness hallucination risk**.
 
 ## 🔄 Pipeline
 
-```mermaid
-flowchart LR
-    A[📄 Source Document] --> C[Source-Conditioned Compression]
-    B[💬 Generated Response] --> C
+<div align="center">
 
-    C --> D1[📦 LZ4]
-    C --> D2[📦 Zstandard]
+<img src="./assets/compfaith_pipeline.png" alt="CompFaith Pipeline" width="100%">
 
-    D1 --> E[Description Increment]
-    D2 --> E
-
-    E --> F[Normalization]
-    F --> G[Minimum Aggregation]
-
-    G --> H[🎯 Hallucination Risk Score]
-```
+</div>
 
 ---
 
