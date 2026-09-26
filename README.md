@@ -92,7 +92,7 @@ A larger $H(x,y)$ indicates a higher **faithfulness hallucination risk**.
 
 <div align="center">
 
-<img src="./assets/compfaith_pipeline.png" alt="CompFaith Pipeline" width="100%">
+<img src="./assets/compfaith_pipeline.png" alt="CompFaith Pipeline" width="75%">
 
 </div>
 
